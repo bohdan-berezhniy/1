@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+     <input type="text" v-model="message" @keyup.13="onClick">
+</div>
+
+
+<script src="https://unpkg.com/vue"></script>    
+<script>
+
+     new Vue({
+            el: "#app",
+            data:{
+                message: ''
+            },
+            methods:{
+                onClick:function(){
+                    console.log(this.message);
+                }
+            }
+        })
+</script>
+</body>
+</html>
